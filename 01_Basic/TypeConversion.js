@@ -23,4 +23,21 @@ let booleanLoggedIn = Boolean(loggedIn)
 
 let p = null
 let stringNumber = String(p)
-console.log(stringNumber);
+//console.log(stringNumber);
+
+//Operations
+
+/*
+1+1
+1-1
+1*1
+2**3
+2/3
+2%3
+*/
+
+
+console.log(true)
+console.log(+true)
+
+
