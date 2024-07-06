@@ -67,4 +67,9 @@ const Obj2 ={
 
 
 const Obj4 = Object.assign({},Obj1,Obj2)
-console.log(Obj4);
+// console.log(Obj4);
+
+
+
+const {"1":one } = Obj1    //object destructuring
+console.log(one);
