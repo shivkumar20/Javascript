@@ -29,4 +29,8 @@ const newArr = new Array("shiv","kumar")
 
 // console.log(myArr.includes(4))
 
-console.log(myArr.indexOf(5));
+// console.log(myArr.indexOf(5));
+
+const str = myArr.join()
+console.log(myArr)
+console.log(str);
