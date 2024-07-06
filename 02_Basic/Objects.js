@@ -24,6 +24,47 @@ myObj.greeting = function() {
     console.log(`Hello there, ${this.fullName}`);
 }
 
-console.log(myObj.greeting());
+// console.log(myObj.greeting());
 
-console.log(myObj);
+// console.log(myObj);
+
+
+const User = {
+    email:"shiv@google.com",
+    fullName:{
+        userName:{
+            firstName:"shiv",
+            lastName:"dhabade"
+        }
+    },
+    age:21
+
+}
+
+// console.log(User.fullName.userName.lastName)
+
+
+// console.log(Object.keys(User));
+// console.log(Object.values(User));
+// console.log(User.hasOwnProperty("fullName"));
+
+
+
+const Obj1 = {
+    1: 'a',
+    2:'b'
+}
+
+const Obj2 ={
+    3:'c',
+    4:'d'
+}
+
+// console.log(Obj1);
+// console.log(Obj2);
+// const Obj3 = {...Obj1, ...Obj2}
+// console.log(Obj3);
+
+
+const Obj4 = Object.assign({},Obj1,Obj2)
+console.log(Obj4);
