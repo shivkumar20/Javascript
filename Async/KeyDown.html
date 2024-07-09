@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async | Keydown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="insert">
+            <p id="text">Pless Any Key & Get Key Info</p>
+            <div class="show"></div>
+        </div>
+    </div>
+</body>
+<script>
+    const show = document.querySelector('.show')
+    // console.log(insert);
+    window.addEventListener('keydown', (e) => {
+        show.innerHTML = `<table border = "1px solid black">
+        <tr>
+            <th>Key</th>
+            <th>Key Code</th>
+            <th>Key Name</th>
+        </tr>
+        <tr>
+            <td>${e.key}</td>
+            <td>${e.keyCode}</td>
+            <td>${e.code}</td>
+        </tr>
+        
+        </table>`;
+    })
+</script>
+
+</html>

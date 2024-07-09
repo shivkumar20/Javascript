@@ -1,0 +1,24 @@
+body{
+    background-color: black;
+    color: orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.insert{
+    font-family: cursive;
+    font-size: 20px;
+}
+
+#text{
+    text-decoration: underline;
+}
+
+.show{
+    padding: 5px 10px;
+}
+
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async | Set Interval</title>
+</head>
+
+<body>
+    <h1>Shivkumar Dhabade</h1>
+    <button id="stop">Stop </button>
+    <button id="start">Start</button>
+</body>
+<script>
+    const start = document.querySelector('#start')
+    const stop = document.querySelector('#stop')
+    const body = document.querySelector('body')
+    // console.log(start);
+
+    let startPrint = function () {
+        // console.log("shiv");
+        const color = `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`;
+        console.log(color);
+        body.style.backgroundColor = color;
+        
+    }
+    let interval;
+    start.addEventListener('click', function (e) {
+        interval = setInterval(startPrint, 1000)
+    })
+
+    stop.addEventListener('click', function (e) {
+        clearInterval(interval)
+        // interval = null
+    })
+
+</script>
+
+</html>

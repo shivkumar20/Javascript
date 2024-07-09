@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async | Set Timeout</title>
+</head>
+<body>
+    <h1>Shivkumar Dhabade</h1>
+    <button id="btn">Stop Change</button>
+</body>
+<script>
+    const changeName = function(){
+        document.querySelector('h1').innerHTML = "Shivkumar Kashinath Dhabade"
+        
+    }
+
+    let timeout = setTimeout(changeName,5000)
+
+
+    let btnStop = document.querySelector('#btn')
+    btnStop.addEventListener('click',function(e) {
+        clearTimeout(timeout)
+        console.log("Timeout Stopped");
+    })
+</script>
+</html>
