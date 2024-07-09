@@ -4,20 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEB API | demo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="main">
+        <h2>My Github Details</h2>
+        <div class="card">
+            <div class="photo"></div>
+            <div class="info">
+               <p id="account"></p>
+               <p id="city"></p>
+               <p id="id"></p>
+               <p id="follower"></p>
+            </div>
+        </div>
+    </div>
 </body>
 <script>
+    const photo = document.querySelector('.photo');
+    const account = document.querySelector('#account');
+    const loc = document.querySelector('#city');
+    const id = document.querySelector('#id');
+    const follower = document.querySelector('#follower')
     const xhr = new XMLHttpRequest()
     const requestURL = 'https://api.github.com/users/shivkumar20'
     xhr.open('GET',requestURL)
+
+
     xhr.onreadystatechange = function(){
         console.log(xhr.readyState);
-        if (xhr.readyState ===4) {
+        if (xhr.readyState === 4) {
             let apiData = JSON.parse(xhr.responseText)
             console.log(typeof apiData);
-            console.log(apiData.location);
+            // console.log(apiData.location);
+            let profilePhoto = apiData.avatar_url;
+            let accountName = apiData.login;
+            let city = apiData.location 
+            let accountID = apiData.id;
+            let follow = apiData.followers;
+            photo.innerHTML = `<img src='${profilePhoto}' alt='Profile Photo'>`;
+            account.innerHTML = `Account Name: ${accountName}`;
+            loc.innerHTML = `Location: ${city}`;
+            id.innerHTML = `ID: ${accountID}`;
+            follower.innerHTML = `Followers  : ${follow}`
         }
     }
     xhr.send()
