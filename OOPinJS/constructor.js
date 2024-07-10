@@ -2,6 +2,9 @@ function User (name,age,marks){
     this.name = name
     this.age = age
     this.marks = marks
+    this.greeting = function() {
+        console.log(`The User Is ${this.name}`);
+    }
     // return this    // can automatically return
 }
 
@@ -20,6 +23,6 @@ const user = ''
 console.log(userOne);
 console.log(userTwo);
 
-
+console.log(userOne.greeting());
 
 console.log( user instanceof User);  //to check whether the object or not 
