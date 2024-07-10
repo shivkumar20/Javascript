@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure | Demo</title>
+</head>
+<body>
+    <button id="orange">orange</button>
+    <button id="yellow">yellow</button>
+
+</body>
+<script>
+
+    //lexical scoping
+
+    // function outer(){
+    //     let name = "sk dhabade"
+    //     function inner() {
+    //         let role = "js"
+    //         console.log(name);   //child can access parents props
+    //         console.log(role);
+    //     }
+    //     // console.log(role);   //parent cant access childs props
+
+    //     inner()
+    // }
+    // outer()
+
+
+    //when u return a function then its whole lexical scope is returned 
+    //closure
+    // function outer(){
+    //     let name = "shiv"
+    //     function inner() {
+    //         console.log(name);
+    //     }
+    //     return inner
+    // }
+    // const myFun  = outer()
+    // myFun()
+
+
+    // document.getElementById('orange').onclick = function(){
+    //     document.body.style.backgroundColor = 'orange'
+    // }
+    // document.getElementById('yellow').onclick = function(){
+    //     document.body.style.backgroundColor = 'yellow'
+    // }
+
+    document.getElementById('orange').onclick = clickHandler('orange')
+    document.getElementById('yellow').onclick = clickHandler('yellow')
+
+
+    function clickHandler(color){
+         return function(){
+
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+
+</script>
+</html>
