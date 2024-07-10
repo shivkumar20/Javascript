@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind | Demo</title>
+</head>
+<body>
+    <button>Click Me</button>
+</body>
+<script>
+    class React{
+        constructor(){
+            this.lib = "React"
+            document.querySelector('button')
+            .addEventListener('click',this.HandleClick.bind(this))
+        }
+        HandleClick(){
+            console.log("Button now clicked");
+            console.log(this.lib);
+        }
+    }
+
+    const react = new React()
+</script>
+</html>
